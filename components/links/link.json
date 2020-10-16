@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_links_links",
+  "info": {
+    "name": "Link",
+    "icon": "ad",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Lable": {
+      "type": "string",
+      "maxLength": 200
+    },
+    "Url": {
+      "type": "string"
+    }
+  }
+}
