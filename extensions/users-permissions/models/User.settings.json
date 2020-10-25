@@ -55,8 +55,12 @@
       "configurable": false
     },
     "articles": {
-      "collection": "article",
-      "via": "user"
+      "via": "user",
+      "collection": "article"
+    },
+    "comments": {
+      "via": "author",
+      "collection": "comments"
     }
   }
 }

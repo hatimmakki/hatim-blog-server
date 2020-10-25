@@ -1,0 +1,31 @@
+{
+  "collectionName": "Sections",
+  "info": {
+    "name": "Section",
+    "icon": "dice-one",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "BackgroundImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "Gallery": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

@@ -27,9 +27,34 @@
       "required": false
     },
     "user": {
-      "via": "articles",
       "plugin": "users-permissions",
-      "model": "user"
+      "model": "user",
+      "via": "articles"
+    },
+    "categories": {
+      "collection": "category",
+      "via": "articles"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "Title"
+    },
+    "comments": {
+      "collection": "comments",
+      "via": "article"
+    },
+    "Keywords": {
+      "type": "string",
+      "maxLength": 200
+    },
+    "HeroImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
     }
   }
 }

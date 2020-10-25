@@ -1,0 +1,77 @@
+{
+  "kind": "collectionType",
+  "collectionName": "Pages",
+  "info": {
+    "name": "Page",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true,
+      "minLength": 3,
+      "maxLength": 200
+    },
+    "Body": {
+      "type": "richtext",
+      "required": true
+    },
+    "Gallery": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "SEO": {
+      "type": "component",
+      "repeatable": false,
+      "component": "page-seo.seo"
+    },
+    "HeroImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "experiences": {
+      "collection": "experience",
+      "via": "pages",
+      "dominant": true
+    },
+    "educations": {
+      "collection": "education",
+      "via": "pages",
+      "dominant": true
+    },
+    "Subtitle": {
+      "type": "string"
+    },
+    "awards": {
+      "collection": "award",
+      "via": "pages",
+      "dominant": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "Title",
+      "private": false,
+      "required": false
+    },
+    "HighlightedText": {
+      "type": "string"
+    }
+  }
+}

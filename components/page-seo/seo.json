@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_page_seo_seos",
+  "info": {
+    "name": "SEO",
+    "icon": "chair"
+  },
+  "options": {},
+  "attributes": {
+    "Description": {
+      "type": "string"
+    },
+    "Keywords": {
+      "type": "string"
+    },
+    "Title": {
+      "type": "string"
+    }
+  }
+}

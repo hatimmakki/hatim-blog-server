@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "Educations",
+  "info": {
+    "name": "Education"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "SchoolName": {
+      "type": "string"
+    },
+    "SchoolUrl": {
+      "type": "string"
+    },
+    "SchooleLogo": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "From": {
+      "type": "date",
+      "required": true
+    },
+    "To": {
+      "type": "date"
+    },
+    "pages": {
+      "via": "educations",
+      "collection": "page"
+    }
+  }
+}

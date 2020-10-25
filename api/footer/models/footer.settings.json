@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "footers",
+  "info": {
+    "name": "Footer",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Text": {
+      "type": "richtext",
+      "maxLength": 200
+    },
+    "Links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "links.link",
+      "required": false
+    }
+  }
+}
