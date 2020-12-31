@@ -72,6 +72,11 @@
     },
     "HighlightedText": {
       "type": "string"
+    },
+    "Address": {
+      "type": "component",
+      "repeatable": false,
+      "component": "page-section.address"
     }
   }
 }

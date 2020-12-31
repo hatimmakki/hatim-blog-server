@@ -328,6 +328,27 @@ input ComponentLinksLinkInput {
   IconName: String
 }
 
+type ComponentPageSectionAddress {
+  id: ID!
+  City: String
+  Suburb: String
+  State: String
+  Country: String
+  Zip: String
+  Phone: String
+  Email: String
+}
+
+input ComponentPageSectionAddressInput {
+  City: String
+  Suburb: String
+  State: String
+  Country: String
+  Zip: String
+  Phone: String
+  Email: String
+}
+
 type ComponentPageSectionSection {
   id: ID!
   BackgroundImage: UploadFile
@@ -590,6 +611,17 @@ input editComponentLinksLinkInput {
   IconName: String
 }
 
+input editComponentPageSectionAddressInput {
+  id: ID
+  City: String
+  Suburb: String
+  State: String
+  Country: String
+  Zip: String
+  Phone: String
+  Email: String
+}
+
 input editComponentPageSectionSectionInput {
   id: ID
   BackgroundImage: ID
@@ -675,6 +707,7 @@ input editPageInput {
   awards: [ID]
   slug: String
   HighlightedText: String
+  Address: editComponentPageSectionAddressInput
   published_at: DateTime
   created_by: ID
   updated_by: ID
@@ -960,7 +993,7 @@ scalar JSON
 """The `Long` scalar type represents 52-bit integers"""
 scalar Long
 
-union Morph = UsersPermissionsMe | UsersPermissionsMeRole | UsersPermissionsLoginPayload | UserPermissionsPasswordPayload | Article | ArticleConnection | ArticleAggregator | ArticleGroupBy | ArticleConnectionId | ArticleConnectionCreated_at | ArticleConnectionUpdated_at | ArticleConnectionTitle | ArticleConnectionBody | ArticleConnectionUser | ArticleConnectionSlug | ArticleConnectionKeywords | ArticleConnectionHeroImage | ArticleConnectionPublished_at | createArticlePayload | updateArticlePayload | deleteArticlePayload | Award | AwardConnection | AwardAggregator | AwardGroupBy | AwardConnectionId | AwardConnectionCreated_at | AwardConnectionUpdated_at | AwardConnectionTitle | AwardConnectionSubtitle | AwardConnectionPublished_at | createAwardPayload | updateAwardPayload | deleteAwardPayload | Category | CategoryConnection | CategoryAggregator | CategoryGroupBy | CategoryConnectionId | CategoryConnectionCreated_at | CategoryConnectionUpdated_at | CategoryConnectionName | CategoryConnectionPublished_at | createCategoryPayload | updateCategoryPayload | deleteCategoryPayload | Comments | CommentsConnection | CommentsAggregator | CommentsGroupBy | CommentsConnectionId | CommentsConnectionCreated_at | CommentsConnectionUpdated_at | CommentsConnectionContent | CommentsConnectionArticle | CommentsConnectionAuthor | CommentsConnectionPublished_at | createCommentPayload | updateCommentPayload | deleteCommentPayload | Education | EducationConnection | EducationAggregator | EducationGroupBy | EducationConnectionId | EducationConnectionCreated_at | EducationConnectionUpdated_at | EducationConnectionSchoolName | EducationConnectionSchoolUrl | EducationConnectionFrom | EducationConnectionTo | EducationConnectionPublished_at | createEducationPayload | updateEducationPayload | deleteEducationPayload | Experience | ExperienceConnection | ExperienceAggregator | ExperienceGroupBy | ExperienceConnectionId | ExperienceConnectionCreated_at | ExperienceConnectionUpdated_at | ExperienceConnectionTitle | ExperienceConnectionFrom | ExperienceConnectionTo | ExperienceConnectionContent | ExperienceConnectionPublished_at | createExperiencePayload | updateExperiencePayload | deleteExperiencePayload | Footer | updateFooterPayload | deleteFooterPayload | Header | updateHeaderPayload | deleteHeaderPayload | Page | PageConnection | PageAggregator | PageGroupBy | PageConnectionId | PageConnectionCreated_at | PageConnectionUpdated_at | PageConnectionTitle | PageConnectionBody | PageConnectionSEO | PageConnectionHeroImage | PageConnectionSubtitle | PageConnectionSlug | PageConnectionHighlightedText | PageConnectionPublished_at | createPagePayload | updatePagePayload | deletePagePayload | Works | WorksConnection | WorksAggregator | WorksGroupBy | WorksConnectionId | WorksConnectionCreated_at | WorksConnectionUpdated_at | WorksConnectionTitle | WorksConnectionHeroImage | WorksConnectionPublished_at | createWorkPayload | updateWorkPayload | deleteWorkPayload | UploadFile | UploadFileConnection | UploadFileAggregator | UploadFileAggregatorSum | UploadFileAggregatorAvg | UploadFileAggregatorMin | UploadFileAggregatorMax | UploadFileGroupBy | UploadFileConnectionId | UploadFileConnectionCreated_at | UploadFileConnectionUpdated_at | UploadFileConnectionName | UploadFileConnectionAlternativeText | UploadFileConnectionCaption | UploadFileConnectionWidth | UploadFileConnectionHeight | UploadFileConnectionFormats | UploadFileConnectionHash | UploadFileConnectionExt | UploadFileConnectionMime | UploadFileConnectionSize | UploadFileConnectionUrl | UploadFileConnectionPreviewUrl | UploadFileConnectionProvider | UploadFileConnectionProvider_metadata | deleteFilePayload | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsRoleConnection | UsersPermissionsRoleAggregator | UsersPermissionsRoleGroupBy | UsersPermissionsRoleConnectionId | UsersPermissionsRoleConnectionName | UsersPermissionsRoleConnectionDescription | UsersPermissionsRoleConnectionType | createRolePayload | updateRolePayload | deleteRolePayload | UsersPermissionsUser | UsersPermissionsUserConnection | UsersPermissionsUserAggregator | UsersPermissionsUserGroupBy | UsersPermissionsUserConnectionId | UsersPermissionsUserConnectionCreated_at | UsersPermissionsUserConnectionUpdated_at | UsersPermissionsUserConnectionUsername | UsersPermissionsUserConnectionEmail | UsersPermissionsUserConnectionProvider | UsersPermissionsUserConnectionConfirmed | UsersPermissionsUserConnectionBlocked | UsersPermissionsUserConnectionRole | createUserPayload | updateUserPayload | deleteUserPayload | ComponentLinksLink | ComponentPageSectionSection | ComponentPageSeoSeo
+union Morph = UsersPermissionsMe | UsersPermissionsMeRole | UsersPermissionsLoginPayload | UserPermissionsPasswordPayload | Article | ArticleConnection | ArticleAggregator | ArticleGroupBy | ArticleConnectionId | ArticleConnectionCreated_at | ArticleConnectionUpdated_at | ArticleConnectionTitle | ArticleConnectionBody | ArticleConnectionUser | ArticleConnectionSlug | ArticleConnectionKeywords | ArticleConnectionHeroImage | ArticleConnectionPublished_at | createArticlePayload | updateArticlePayload | deleteArticlePayload | Award | AwardConnection | AwardAggregator | AwardGroupBy | AwardConnectionId | AwardConnectionCreated_at | AwardConnectionUpdated_at | AwardConnectionTitle | AwardConnectionSubtitle | AwardConnectionPublished_at | createAwardPayload | updateAwardPayload | deleteAwardPayload | Category | CategoryConnection | CategoryAggregator | CategoryGroupBy | CategoryConnectionId | CategoryConnectionCreated_at | CategoryConnectionUpdated_at | CategoryConnectionName | CategoryConnectionPublished_at | createCategoryPayload | updateCategoryPayload | deleteCategoryPayload | Comments | CommentsConnection | CommentsAggregator | CommentsGroupBy | CommentsConnectionId | CommentsConnectionCreated_at | CommentsConnectionUpdated_at | CommentsConnectionContent | CommentsConnectionArticle | CommentsConnectionAuthor | CommentsConnectionPublished_at | createCommentPayload | updateCommentPayload | deleteCommentPayload | Education | EducationConnection | EducationAggregator | EducationGroupBy | EducationConnectionId | EducationConnectionCreated_at | EducationConnectionUpdated_at | EducationConnectionSchoolName | EducationConnectionSchoolUrl | EducationConnectionFrom | EducationConnectionTo | EducationConnectionPublished_at | createEducationPayload | updateEducationPayload | deleteEducationPayload | Experience | ExperienceConnection | ExperienceAggregator | ExperienceGroupBy | ExperienceConnectionId | ExperienceConnectionCreated_at | ExperienceConnectionUpdated_at | ExperienceConnectionTitle | ExperienceConnectionFrom | ExperienceConnectionTo | ExperienceConnectionContent | ExperienceConnectionPublished_at | createExperiencePayload | updateExperiencePayload | deleteExperiencePayload | Footer | updateFooterPayload | deleteFooterPayload | Header | updateHeaderPayload | deleteHeaderPayload | Page | PageConnection | PageAggregator | PageGroupBy | PageConnectionId | PageConnectionCreated_at | PageConnectionUpdated_at | PageConnectionTitle | PageConnectionBody | PageConnectionSEO | PageConnectionHeroImage | PageConnectionSubtitle | PageConnectionSlug | PageConnectionHighlightedText | PageConnectionAddress | PageConnectionPublished_at | createPagePayload | updatePagePayload | deletePagePayload | Works | WorksConnection | WorksAggregator | WorksGroupBy | WorksConnectionId | WorksConnectionCreated_at | WorksConnectionUpdated_at | WorksConnectionTitle | WorksConnectionHeroImage | WorksConnectionPublished_at | createWorkPayload | updateWorkPayload | deleteWorkPayload | UploadFile | UploadFileConnection | UploadFileAggregator | UploadFileAggregatorSum | UploadFileAggregatorAvg | UploadFileAggregatorMin | UploadFileAggregatorMax | UploadFileGroupBy | UploadFileConnectionId | UploadFileConnectionCreated_at | UploadFileConnectionUpdated_at | UploadFileConnectionName | UploadFileConnectionAlternativeText | UploadFileConnectionCaption | UploadFileConnectionWidth | UploadFileConnectionHeight | UploadFileConnectionFormats | UploadFileConnectionHash | UploadFileConnectionExt | UploadFileConnectionMime | UploadFileConnectionSize | UploadFileConnectionUrl | UploadFileConnectionPreviewUrl | UploadFileConnectionProvider | UploadFileConnectionProvider_metadata | deleteFilePayload | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsRoleConnection | UsersPermissionsRoleAggregator | UsersPermissionsRoleGroupBy | UsersPermissionsRoleConnectionId | UsersPermissionsRoleConnectionName | UsersPermissionsRoleConnectionDescription | UsersPermissionsRoleConnectionType | createRolePayload | updateRolePayload | deleteRolePayload | UsersPermissionsUser | UsersPermissionsUserConnection | UsersPermissionsUserAggregator | UsersPermissionsUserGroupBy | UsersPermissionsUserConnectionId | UsersPermissionsUserConnectionCreated_at | UsersPermissionsUserConnectionUpdated_at | UsersPermissionsUserConnectionUsername | UsersPermissionsUserConnectionEmail | UsersPermissionsUserConnectionProvider | UsersPermissionsUserConnectionConfirmed | UsersPermissionsUserConnectionBlocked | UsersPermissionsUserConnectionRole | createUserPayload | updateUserPayload | deleteUserPayload | ComponentLinksLink | ComponentPageSectionAddress | ComponentPageSectionSection | ComponentPageSeoSeo
 
 type Mutation {
   createArticle(input: createArticleInput): createArticlePayload
@@ -1033,6 +1066,7 @@ type Page {
   Subtitle: String
   slug: String
   HighlightedText: String
+  Address: ComponentPageSectionAddress
   published_at: DateTime
   Gallery(sort: String, limit: Int, start: Int, where: JSON): [UploadFile]
   experiences(sort: String, limit: Int, start: Int, where: JSON): [Experience]
@@ -1049,6 +1083,11 @@ type PageConnection {
   values: [Page]
   groupBy: PageGroupBy
   aggregate: PageAggregator
+}
+
+type PageConnectionAddress {
+  key: ID
+  connection: PageConnection
 }
 
 type PageConnectionBody {
@@ -1117,6 +1156,7 @@ type PageGroupBy {
   Subtitle: [PageConnectionSubtitle]
   slug: [PageConnectionSlug]
   HighlightedText: [PageConnectionHighlightedText]
+  Address: [PageConnectionAddress]
   published_at: [PageConnectionPublished_at]
 }
 
@@ -1132,6 +1172,7 @@ input PageInput {
   awards: [ID]
   slug: String
   HighlightedText: String
+  Address: ComponentPageSectionAddressInput
   published_at: DateTime
   created_by: ID
   updated_by: ID

@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_page_section_addresses",
+  "info": {
+    "name": "Address",
+    "icon": "home",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "City": {
+      "type": "string",
+      "maxLength": 50,
+      "required": false
+    },
+    "Suburb": {
+      "type": "string",
+      "maxLength": 50
+    },
+    "State": {
+      "type": "string"
+    },
+    "Country": {
+      "type": "string"
+    },
+    "Zip": {
+      "type": "string"
+    },
+    "Phone": {
+      "type": "string"
+    },
+    "Email": {
+      "type": "email"
+    }
+  }
+}
